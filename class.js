@@ -61,6 +61,10 @@ mostrar(c)
 //operadores logicos 
 mostrar("Operador y logico(AND):" + (5==5 & true));
 mostrar("Operador y logico(AND):" + (5 !=5 && true));
-mostrar("Operador y logico(OR):" + (5 >= 5 || 2 < 6));
 
-    
+mostrar("Operador y logico(OR):" + (5 >= 5 || 2 < 6));
+mostrar("Operador y logico(OR):" + (5 > 5 || 2 < 6));
+
+mostrar("Operador NO logico(NOT):" + !(5 >= 5));
+mostrar("Operador NO logico(NOT):" + !(5 > 5));
+
