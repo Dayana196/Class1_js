@@ -55,3 +55,76 @@ console.log(decodeSpell('⚕.♒')) // NaN
 // numeros.delete(xelemento) -> true / false
 // numeros.add(xelemento) -> set
 // numeros.clear()
+
+//PENDIENTE 🚩
+ 
+let textos = "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas \"Letraset\", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.";
+
+//substring 
+let nuevaCadena = textos.substring(50, 100);
+console.log(nuevaCadena);
+
+let otraCadena = textos.slice(100);
+console.log(otraCadena);
+
+/**
+ * funcion para contar cadnas de texto
+ * @param {string} cadena 
+ * @param {separador} separador 
+ * @return {Array} Array de valores
+ */
+
+function contarNumeros(cadena,separador){
+    return cadena.split(separador);
+}
+function dividirTexto(cadena,separador){
+    return cadena.split(separador);
+}
+
+let numerosConComas = "1,2,3,4,5,6,7,8,9,10,11";
+
+let valores = dividirTexto(numerosConComas,",")
+console.log(valores); // [1,2,3,4,5,6,7,8,9]
+let totalPalabras = dividirTexto(textos," ");
+console.log(`totalPalabras:${totalPalabras.length}`);
+
+let nick = "@Dayana"
+let validarNick = nick.startsWith("@");
+let respuesta = validarNick ? "SI" : "NO";
+
+console.log(`El nick es valido? ${respuesta}`);
+
+let contiene500Anos = textos.includes("500 años");
+console.log(`Si contiene? ${contiene500Anos? "SI" : "NO"}`);
+
+
+// Funciones de exprecion anonimas
+const calcularEdad = function (edad){
+    return edad >= 18;
+}
+
+console.log(calcularEdad(16));
+
+//Funciones de exprecion nombradas
+const factorial = function fact(n) {
+    if (n<=1) return 1;
+    return n * fact(n - 1);
+}
+
+console.log(factorial(5));
+
+// Funciones de flecha
+function xOperacion(a) {console.log(a); return a * a; }
+const otraOperacion = a => {
+    console.log(a);
+    return a * a;
+}
+const lightOperqacionArrow = a => a * a;
+const sumarArrow = (a, b) => a + b;
+console.log(sumarArrow(20, 30));
+
+
+
+
+
+
