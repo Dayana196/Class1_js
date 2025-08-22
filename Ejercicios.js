@@ -33,6 +33,24 @@ function contarVocales(texto){
     return contador;
 } 
 
-console.log(contarVocales("Hola Mundo")); // 4
+console.log(contarVocales("Me encanta dibujar")); // 4
 
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
+function convertirMayusculas(arrayStrings) {
+    return arrayStrings.map(function(str) {
+        return str.toUpperCase();
+    });
+
+}
+console.log(convertirMayusculas(["gato", "mundo", "kitty"]));
+
+// 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
+function esPrimo(numero) {
+    if (numero <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) return false;
+    }
+    return true;
+}
+console.log(esPrimo(3));
+
