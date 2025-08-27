@@ -3,11 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judas</title>
-    <script type="module" src="earthquakes.js" defer></script>
-    <script type="module" src="promesas.js"> defer</script>
+    <title>Terrremotos BBB</title>
+    <script type="module" src="class.js" defer></script>
+    <link rel="stylesheet" href="resources/css/style.css">
+
 </head>
 <body>
-    
+    <h1>Terremotos</h1>
+    <div class="toolbar">Busqueda de terremotos por range fechas (USGS) </div>
+    <section class="toolbar">
+        <div class="filters">
+            <div class="field">
+                <label for="rangeSelect">Rango</label>
+                <select name="rangeSelect" id="rangeSelect">
+                <option value="last1">ultimas 24 horas</option>
+                <option value="last1">Ultimos 7 dias</option>
+                <option value="last1">Ultimos 30 dias</option>
+                <option value="last1">Personalizado...</option>
+                </select>
+            </div>
+            <div class="row" id="customRow" style="display:none;">
+                <div class="field">
+                    <label for="starDate">Desde</label>
+                    <input type="Date" name="starDate" id="starDate">
+                </div>
+                <div class="field">
+                    <label for="endDate">Hasta</label>
+                    <input type="date" name="endDate" id="endDate">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stast" id="stast"></section>
+    <section class="grid" id="grid"></section>
+    <section class="pager" id="pager">
+        <button>&laquo;Anterior</button>
+        <span id="pageInfo" class="chip">Pagina 1 / 1</span>
+        <button>Siguiente &raquo;</button>
+    </section>
+    <section id="messages"></section>
+
 </body>
 </html>

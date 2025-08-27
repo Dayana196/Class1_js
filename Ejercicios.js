@@ -54,3 +54,30 @@ function esPrimo(numero) {
 }
 console.log(esPrimo(3));
 
+// 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+function elementosComunes(array1, array2) {
+    return array1.filter(function(elemento) {
+        return array2.includes(elemento);
+    });
+}
+
+console.log(elementosComunes([1, 2, 3, 4], [3, 4, 5, 6])); // [3, 4]
+
+// 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+function sumarPares(arrayNumeros) {
+    return arrayNumeros.reduce(function(acumulador, numero) {
+        if (numero % 2 === 0) {
+            return acumulador + numero;
+        }
+        return acumulador;
+    }, 0);
+}
+console.log(sumarPares([1, 2, 3, 4, 5, 6])); 
+
+// 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+function elevarAlCuadrado(arrayNumeros) {
+    return arrayNumeros.map(function(numero) {
+        return numero * numero;
+    });
+}
+console.log(elevarAlCuadrado([1, 2, 3, 4])); 
